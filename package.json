@@ -29,7 +29,7 @@
     "url": "git://github.com/mllrsohn/gulp-protractor.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "node node_modules/mocha/bin/mocha"
   },
   "dependencies": {
     "event-stream": "^3.3.2",

@@ -1,4 +1,4 @@
-# gulp-protractor [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+# gulp-protractor [![NPM version][version-img]][github] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
 
 > Run your [angular protractor](https://github.com/angular/protractor) tests with [gulp](https://github.com/wearefractal/gulp)
 
@@ -16,11 +16,11 @@ Then, add it to your `gulpfile.js`:
 var protractor = require("gulp-protractor").protractor;
 
 gulp.src(["./src/tests/*.js"])
-	.pipe(protractor({
-		configFile: "test/protractor.config.js",
-		args: ['--baseUrl', 'http://127.0.0.1:8000']
-	}))
-	.on('error', function(e) { throw e })
+  .pipe(protractor({
+    configFile: "test/protractor.config.js",
+    args: ['--baseUrl', 'http://127.0.0.1:8000']
+  }))
+  .on('error', function(e) { throw e })
 ```
 
 ### Protractor Webdriver
@@ -83,23 +83,23 @@ var path = require('path');
 var child_process = require('child_process');
 
 function getProtractorBinary(binaryName){
-	var winExt = /^win/.test(process.platform)? '.cmd' : '';
-	var pkgPath = require.resolve('protractor');
-	var protractorDir = path.resolve(path.join(path.dirname(pkgPath), '..', 'bin'));
-	return path.join(protractorDir, '/'+binaryName+winExt);
+  var winExt = /^win/.test(process.platform)? '.cmd' : '';
+  var pkgPath = require.resolve('protractor');
+  var protractorDir = path.resolve(path.join(path.dirname(pkgPath), '..', 'bin'));
+  return path.join(protractorDir, '/'+binaryName+winExt);
 }
 
 gulp.task('protractor-install', function(done){
-	child_process.spawn(getProtractorBinary('webdriver-manager'), ['update'], {
-		stdio: 'inherit'
-	}).once('close', done);
+  child_process.spawn(getProtractorBinary('webdriver-manager'), ['update'], {
+    stdio: 'inherit'
+  }).once('close', done);
 });
 
 gulp.task('protractor-run', function (done) {
-	var argv = process.argv.slice(3); // forward args to protractor
-	child_process.spawn(getProtractorBinary('protractor'), argv, {
-		stdio: 'inherit'
-	}).once('close', done);
+  var argv = process.argv.slice(3); // forward args to protractor
+  child_process.spawn(getProtractorBinary('protractor'), argv, {
+    stdio: 'inherit'
+  }).once('close', done);
 });
 
 ```
@@ -113,11 +113,11 @@ You can add command line arguments for protractor behind the gulp task:
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
-[npm-url]: https://npmjs.org/package/gulp-protractor
-[npm-image]: https://badge.fury.io/js/gulp-protractor.png
+[github]: https://github.com/forumouth/gulp-protractor
+[version-img]: https://badge.fury.io/gh/forumouth%2Fgulp-protractor.svg
 
-[travis-url]: http://travis-ci.org/mllrsohn/gulp-protractor
-[travis-image]: https://secure.travis-ci.org/mllrsohn/gulp-protractor.png?branch=master
+[travis-url]: http://travis-ci.org/forumouth/gulp-protractor
+[travis-image]: https://secure.travis-ci.org/forumouth/gulp-protractor.png?branch=master
 
-[depstat-url]: https://david-dm.org/mllrsohn/gulp-protractor
-[depstat-image]: https://david-dm.org/mllrsohn/gulp-protractor.png
+[depstat-url]: https://david-dm.org/forumouth/gulp-protractor
+[depstat-image]: https://david-dm.org/forumouth/gulp-protractor.svg
