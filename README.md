@@ -117,7 +117,7 @@ You can add command line arguments for protractor behind the gulp task:
 [version-img]: https://badge.fury.io/gh/forumouth%2Fgulp-protractor.svg
 
 [travis-url]: http://travis-ci.org/forumouth/gulp-protractor
-[travis-image]: https://secure.travis-ci.org/forumouth/gulp-protractor.png?branch=master
+[travis-image]: https://travis-ci.org/Forumouth/gulp-protractor.svg?branch=master
 
 [depstat-url]: https://david-dm.org/forumouth/gulp-protractor
 [depstat-image]: https://david-dm.org/forumouth/gulp-protractor.svg
