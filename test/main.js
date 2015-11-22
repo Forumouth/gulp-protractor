@@ -2,7 +2,6 @@
 'use strict';
 
 var fs = require('fs'),
-    es = require('event-stream'),
     expect = require('expect.js'),
     sinon = require('sinon'),
     path = require('path');
@@ -22,12 +21,12 @@ var winExt = /^win/.test(process.platform)?'.cmd':'';
 describe('gulp-protactor: getProtractorDir', function() {
 
     it('should find the protractor installation', function(done) {
-		expect(getProtractorDir()).to.equal(path.resolve('./node_modules/.bin'));
-		done();
-	});
+    expect(getProtractorDir()).to.equal(path.resolve('./node_modules/.bin'));
+    done();
+  });
 });
 
-	
+
 describe('gulp-protactor: protactor', function() {
 
     it('should pass in the args into the protactor call', function(done) {

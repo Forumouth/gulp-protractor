@@ -17,6 +17,10 @@
     {
       "name": "Robbin Habermehl",
       "email": "robbin@habermehl.net"
+    },
+    {
+      "name": "Hiroaki Yamamoto",
+      "email": "hiroaki@hysoftware.net"
     }
   ],
   "main": "./index.js",
@@ -28,24 +32,14 @@
     "test": "mocha"
   },
   "dependencies": {
-    "event-stream": "^3.1.4",
-    "async": ">=0.7.0 <1.0.0",
-    "dargs": ">=0.1.0 <4.0.0",
-    "gulp-util": ">=2.2.14 <4.0.0",
-    "protractor": "^2.0.0"
+    "event-stream": "^3.3.2",
+    "gulp-util": "^3.0.7"
   },
   "devDependencies": {
-    "mocha": ">=1.18.2 <3.0.0",
-    "sinon": "^1.9.1",
-    "expect.js": "^0.3.1"
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.4",
+    "protractor": "^3.0.0",
+    "sinon": "^1.9.1"
   },
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.2.10"
-  },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ]
+  "licenses": "MIT"
 }
